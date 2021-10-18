@@ -1,0 +1,21 @@
+{
+  "name":"CSS Debug tools",
+  "description":"CSS debug tools",
+  "short_name":"css-debug",
+  "version":"1.0.0",
+  "manifest_version":3,
+  "permissions":[
+    "scripting",
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Open tools"
+  },
+  "content_scripts":[
+    {
+      "matches":["http://*/*", "https://*/*"],
+      "js":["content-script.js"]
+    }
+  ]
+}
